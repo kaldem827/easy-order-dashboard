@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./Layout";
+import { Popup } from "./pages/Components/Popup";
+import { Home } from "./pages/Home/Home";
+import { Menu } from "./pages/Menu/Menu";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+        </Route>
+      </Routes>
+
+      <Popup
+        header={"Add Meal"}
+        text="Meal added with success"
+        type={"success"}
+      />
     </div>
   );
 }

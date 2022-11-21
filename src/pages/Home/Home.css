@@ -1,0 +1,231 @@
+.search-bar {
+  width: 100%;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  box-shadow: 0px 1px 5px 0px grey;
+}
+
+.search-bar img {
+  margin: 0 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.icons-container {
+  display: flex;
+}
+
+.search-bar .input-container {
+  width: 400px;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.input-container input {
+  padding: 0 0.5rem;
+  height: 100%;
+  border: 0;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+.cards-container {
+  display: flex;
+  padding: 0 3rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 200px;
+  box-shadow: 1px 1px 5px 0px rgba(96, 96, 96, 0.622);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  margin: 1rem 1rem;
+}
+
+.home ul {
+  margin-left: 3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.orders {
+  margin-left: 3rem;
+}
+
+.order-management {
+  width: 100%;
+  padding: 1rem;
+}
+
+.order-management .title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-management .action-btn {
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  background: red;
+  border-radius: 0.2rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2rem;
+  background: green;
+}
+
+.waiting {
+  background: red;
+}
+
+.order-management span:hover {
+  background: transparent;
+  color: black;
+  border-color: black;
+}
+
+.orders table {
+  margin-top: 1rem;
+
+  width: 100%;
+}
+
+.orders table td {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+
+.orders table tr {
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.modal {
+  width: 500px;
+  height: auto;
+  background: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 100;
+}
+
+/* hide overlay */
+
+.overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* style modal content */
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* style modal header */
+
+.modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+}
+
+/* style modal body */
+
+.modal-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-body-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-body-right h3 {
+  margin: 1rem 0;
+}
+
+.modal-body-right ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-body-right li {
+  border: 1px solid black;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.8rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.no-orders {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
